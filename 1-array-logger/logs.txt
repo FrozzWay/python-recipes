@@ -1,0 +1,50 @@
+--------------------------------------------------
+ → Called <SortedArray>.random_fill()
+   Before: [None, None, None, None, None] top=0, size=5
+   After: [30, 31, 36, 72, 99] top=4, size=5
+
+     ↳ Called <SortedArray>.random_fill(), base method of <Array>
+       Before: [None, None, None, None, None] top=0, size=5
+       After: [36, 30, 31, 72, 99] top=4, size=5
+
+     ↳ Called <SortedArray>.selection_sort(), base method of <Array>
+       Before: [36, 30, 31, 72, 99] top=4, size=5
+       After: [30, 31, 36, 72, 99] top=4, size=5
+
+--------------------------------------------------
+ → Called <SortedArray>.insert(item=15)
+   Before: [30, 31, 36, 72, 99] top=4, size=5
+   After: [15, 30, 31, 36, 72, 99, None, None, None, None] top=5, size=10
+
+     ↳ Called <SortedArray>.search(value=15)
+
+--------------------------------------------------
+ → Called <SortedArray>.search(value=15)
+
+--------------------------------------------------
+ → Called <SortedArray>.pop(), base method of <Array>
+   Before: [15, 30, 31, 36, 72, 99, None, None, None, None] top=5, size=10
+   After: [15, 30, 31, 36, 72, None, None, None, None, None] top=4, size=10
+
+--------------------------------------------------
+ → Called <SortedArray>.delete(value=31), base method of <Array>
+   Before: [15, 30, 31, 36, 72, None, None, None, None, None] top=4, size=10
+   After: [15, 30, 36, 72, None, None, None, None, None, None] top=3, size=10
+
+     ↳ Called <SortedArray>.search(value=31)
+
+--------------------------------------------------
+ → Called <Array>.random_fill()
+   Before: [None, None, None, None, None, None, None, None, None, None] top=0, size=10
+   After: [81, 43, 45, 54, 39, 28, 36, 64, 97, 94] top=9, size=10
+
+--------------------------------------------------
+ → Called <Array>.selection_sort()
+   Before: [81, 43, 45, 54, 39, 28, 36, 64, 97, 94] top=9, size=10
+   After: [28, 36, 39, 43, 45, 54, 64, 81, 94, 97] top=9, size=10
+
+--------------------------------------------------
+ → Called <SortedArray>.pop(), base method of <Array>
+   Before: [28, 36, 39, 43, 45, 54, 64, 81, 94, 97] top=9, size=10
+   After: [28, 36, 39, 43, 45, 54, 64, 81, 94, None] top=8, size=10
+
